@@ -35,6 +35,8 @@
 *.out
 *.app
 
+*.out.dSYM
+
 ### macOS ###
 # General
 .DS_Store
@@ -74,6 +76,7 @@ Temporary Items
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/c_cpp_properties.json
 !.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
