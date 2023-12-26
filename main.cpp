@@ -6,11 +6,13 @@ using namespace std;
 
 char const SEPARATOR = ' ';
 
-void printHello(string name, string prefix = "Hello") {
+void printHello(string name, string prefix = "Hello")
+{
   cout << prefix << ", " << name << "!\n";
 };
 
-int main() {
+int main()
+{
   string const STR1("Hello"), STR2("world");
   cout << STR1 << SEPARATOR << STR2 << '!' << endl;
 
