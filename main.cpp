@@ -4,10 +4,15 @@
 
 using namespace std;
 
+char const SEPARATOR = ' ';
+
+void printHello(string name, string prefix = "Hello") {
+  cout << prefix << ", " << name << "!\n";
+};
+
 int main() {
   string const STR1("Hello"), STR2("world");
-  char const CHAR1 = '!';
-  cout << STR1 << ' ' << STR2 << CHAR1 << endl;
+  cout << STR1 << SEPARATOR << STR2 << '!' << endl;
 
   cout << "Size of int type in bytes: " << sizeof(double) << endl;
   cout << "Lower limit of int : " << numeric_limits<double>::min() << endl;
@@ -16,7 +21,8 @@ int main() {
   string name = "";
   cout << "Please, enter your full name: ";
   getline(cin, name);
-  cout << "Hello, " << name << "!\n";
+  printHello(name);
+  printHello(name, "Holà");
 
   int value1(33), value2(11);
   exchangeValues(value1, value2);
