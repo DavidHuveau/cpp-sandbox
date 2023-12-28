@@ -19,6 +19,7 @@ int main() {
     string colors[] = {"red", "green", "blue"};
     showColors(colors, 3);
     showColors(colors, 3);
+    cout << "Average: " << averageScore() << endl;
     break;
   }
   }
