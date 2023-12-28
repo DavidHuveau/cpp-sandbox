@@ -4,6 +4,7 @@
 #include "arrays.hpp"
 #include "tools.hpp"
 #include "variables.hpp"
+#include "files.hpp"
 
 using namespace std;
 
@@ -22,6 +23,12 @@ int main() {
     cout << "Average: " << averageScore() << endl;
     break;
   }
+  case 3:
+    showFileContent();
+    break;
+  case 4:
+    writeFile();
+    break;
   }
 
   return 0;

@@ -7,5 +7,7 @@ using namespace std;
 void showMenu(short int& choiceNumber) {
   cout << "1 - variables" << endl;
   cout << "2 - arrays" << endl;
+  cout << "3 - read file" << endl;
+  cout << "4 - write file" << endl;
   cin >> choiceNumber;
 }
