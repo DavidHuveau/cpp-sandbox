@@ -1,16 +1,27 @@
 #include <iostream>
+#include <string>
 
+#include "arrays.hpp"
 #include "tools.hpp"
 #include "variables.hpp"
 
 using namespace std;
 
 int main() {
-  print();
+  short int choiceNumber;
+  showMenu(choiceNumber);
 
-  int value1(33), value2(11);
-  exchangeValues(value1, value2);
-  cout << "value1: " << value1 << " value2: " << value2 << endl;
+  switch (choiceNumber) {
+  case 1:
+    print();
+    break;
+  case 2: {
+    string colors[] = {"red", "green", "blue"};
+    showColors(colors, 3);
+    showColors(colors, 3);
+    break;
+  }
+  }
 
   return 0;
 }

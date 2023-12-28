@@ -1,7 +1,11 @@
 #include "tools.hpp"
 
-void exchangeValues(int& a, int& b) {
-  int tmp(b);
-  b = a;
-  a = tmp;
+#include <iostream>
+
+using namespace std;
+
+void showMenu(short int& choiceNumber) {
+  cout << "1 - variables" << endl;
+  cout << "2 - arrays" << endl;
+  cin >> choiceNumber;
 }
