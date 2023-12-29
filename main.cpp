@@ -5,6 +5,7 @@
 #include "tools.hpp"
 #include "variables.hpp"
 #include "files.hpp"
+#include "pointers.hpp"
 
 using namespace std;
 
@@ -29,7 +30,9 @@ int main() {
   case 4:
     writeFile();
     break;
+  case 5:
+    pointers();
+    break;
   }
-
   return 0;
 }

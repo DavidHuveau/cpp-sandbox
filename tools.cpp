@@ -9,5 +9,6 @@ void showMenu(short int& choiceNumber) {
   cout << "2 - arrays" << endl;
   cout << "3 - read file" << endl;
   cout << "4 - write file" << endl;
+  cout << "5 - pointers" << endl;
   cin >> choiceNumber;
 }

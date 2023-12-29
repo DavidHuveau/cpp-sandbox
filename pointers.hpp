@@ -1,0 +1,4 @@
+#ifndef POINTERS_HPP_INCLUDED
+#define POINTERS_HPP_INCLUDED
+void pointers();
+#endif  // POINTERS_HPP_INCLUDED
