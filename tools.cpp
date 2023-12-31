@@ -10,5 +10,6 @@ void showMenu(short int& choiceNumber) {
   cout << "3 - read file" << endl;
   cout << "4 - write file" << endl;
   cout << "5 - pointers" << endl;
+  cout << "6 - Character classes" << endl;
   cin >> choiceNumber;
 }

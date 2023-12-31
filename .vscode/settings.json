@@ -9,7 +9,9 @@
     "iostream": "cpp",
     "istream": "cpp",
     "tuple": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "__config": "cpp",
+    "__nullptr": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

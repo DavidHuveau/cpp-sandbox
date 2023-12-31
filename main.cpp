@@ -6,6 +6,7 @@
 #include "variables.hpp"
 #include "files.hpp"
 #include "pointers.hpp"
+#include "Character.hpp"
 
 using namespace std;
 
@@ -33,6 +34,16 @@ int main() {
   case 5:
     pointers();
     break;
+  case 6: {
+    Character david, goliath;
+    goliath.attaquer(david);
+    david.boirePotionDeVie(20);
+    goliath.attaquer(david);
+    david.attaquer(goliath);
+    goliath.changerArme("Double hache tranchante veneneuse de la mort", 40);
+    goliath.attaquer(david);
+    break;
+  }
   }
   return 0;
 }
