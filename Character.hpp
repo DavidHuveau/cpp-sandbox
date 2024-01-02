@@ -8,18 +8,18 @@
 class Character {
 public:
   Character();
-  Character(std::string nomArme, int degatsArme);
-  Character(Character const& autre);
+  Character(std::string weaponName, int weaponDamages);
+  Character(Character const& other);
   ~Character();
-  void recevoirDegats(int nbDegats);
-  void attaquer(Character& cible);
-  void boirePotionDeVie(int quantitePotion);
-  void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-  bool estVivant() const;
-  void afficherEtat();
+  void receiveDamages(int nbDamages);
+  void attack(Character& target);
+  void drinkLifePotion(int quantityPotion);
+  void changeWeapon(std::string nameNewWeapon, int damagesNewWeapon);
+  bool isAlive() const;
+  void showState();
 
 private:
-  int    m_vie;
+  int    m_life;
   Weapon m_weapon;
 };
 

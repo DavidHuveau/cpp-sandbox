@@ -36,17 +36,17 @@ int main() {
     break;
   case 6: {
     Character david, goliath("Excalibur", 20);
-    goliath.attaquer(david);
-    david.boirePotionDeVie(20);
-    goliath.attaquer(david);
-    david.attaquer(goliath);
-    goliath.changerArme("Narsil", 40);
-    goliath.attaquer(david);
+    goliath.attack(david);
+    david.drinkLifePotion(20);
+    goliath.attack(david);
+    david.attack(goliath);
+    goliath.changeWeapon("Narsil", 40);
+    goliath.attack(david);
 
     cout << endl << "David" << endl;
-    david.afficherEtat();
+    david.showState();
     cout << endl << "Goliath" << endl;
-    goliath.afficherEtat();
+    goliath.showState();
     break;
   }
   }

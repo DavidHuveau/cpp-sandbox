@@ -3,21 +3,21 @@
 
 using namespace std;
 
-Weapon::Weapon() : m_nom("Rusty Sword"), m_degats(10) {
+Weapon::Weapon() : m_name("Rusty Sword"), m_damages(10) {
 }
 
-Weapon::Weapon(string name, int degats) : m_nom(name), m_degats(degats) {
+Weapon::Weapon(string name, int damages) : m_name(name), m_damages(damages) {
 }
 
-void Weapon::changer(string name, int degats) {
-  m_nom    = name;
-  m_degats = degats;
+void Weapon::change(string name, int damages) {
+  m_name    = name;
+  m_damages = damages;
 }
 
-void Weapon::afficher() const {
-  cout << "Weapon : " << m_nom << " (Degats : " << m_degats << ")" << endl;
+void Weapon::show() const {
+  cout << "Weapon : " << m_name << " (Damages : " << m_damages << ")" << endl;
 }
 
-int Weapon::getDegats() const {
-    return m_degats;
+int Weapon::getDamages() const {
+    return m_damages;
 }

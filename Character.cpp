@@ -4,49 +4,50 @@
 
 using namespace std;
 
-Character::Character() : m_vie(100), m_weapon("Epee rouillee", 10) {
+Character::Character() : m_life(100), m_weapon("Epee rouillee", 10) {
 }
 
-Character::Character(std::string nomArme, int degatsArme) : m_vie(100), m_weapon(nomArme, degatsArme) {
+Character::Character(std::string weaponName, int weaponDamages) : m_life(100), m_weapon(weaponName, weaponDamages) {
 }
 
-Character::Character(Character const& autre) : m_vie(autre.m_vie), m_weapon(autre.m_weapon) {
+Character::Character(Character const& other) : m_life(other.m_life), m_weapon(other.m_weapon) {
 }
 
 Character::~Character() {
 }
 
-void Character::recevoirDegats(int nbDegats) {
-  m_vie -= nbDegats;
+void Character::receiveDamages(int nbDamages) {
+  m_life -= nbDamages;
 
-  if (m_vie < 0) {
-    m_vie = 0;
+  if (m_life < 0) {
+    m_life = 0;
   }
 }
 
-void Character::attaquer(Character& cible) {
-  cout << ">attaquer" << endl;
-  cible.recevoirDegats(m_weapon.getDegats());
+void Character::attack(Character& target) {
+  cout << ">Attack" << endl;
+  target.receiveDamages(m_weapon.getDamages());
 }
 
-void Character::boirePotionDeVie(int quantitePotion) {
-  m_vie += quantitePotion;
+void Character::drinkLifePotion(int quantityPotion) {
+  cout << ">Drink Life Potion" << endl;
+  m_life += quantityPotion;
 
-  if (m_vie > 100) {
-    m_vie = 100;
+  if (m_life > 100) {
+    m_life = 100;
   }
 }
 
-void Character::changerArme(string nomNouvelleArme, int degatsNouvelleArme) {
-  cout << ">changerArme: " << nomNouvelleArme << endl;
-  m_weapon.changer(nomNouvelleArme, degatsNouvelleArme);
+void Character::changeWeapon(string nameNewWeapon, int damagesNewWeapon) {
+  cout << ">Change weapon: " << nameNewWeapon << endl;
+  m_weapon.change(nameNewWeapon, damagesNewWeapon);
 }
 
-bool Character::estVivant() const {
-  return m_vie > 0;
+bool Character::isAlive() const {
+  return m_life > 0;
 }
 
-void Character::afficherEtat() {
-  cout << "Vie : " << m_vie << endl;
-  m_weapon.afficher();
+void Character::showState() {
+  cout << "Life : " << m_life << endl;
+  m_weapon.show();
 }
