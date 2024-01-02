@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "Weapon.hpp"
+
 class Character {
 public:
   Character();
@@ -14,11 +16,11 @@ public:
   void boirePotionDeVie(int quantitePotion);
   void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
   bool estVivant() const;
+  void afficherEtat();
 
 private:
-  int         m_vie;
-  std::string m_nomArme;
-  int         m_degatsArme;
+  int    m_vie;
+  Weapon m_weapon;
 };
 
 #endif
