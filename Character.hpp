@@ -9,6 +9,8 @@ class Character {
 public:
   Character();
   Character(std::string weaponName, int weaponDamages);
+  // It does not need to be implemented unless a particular behaviour is desired.
+  // By default, all the object's attributes will be copied.
   Character(Character const& other);
   ~Character();
   void receiveDamages(int nbDamages);

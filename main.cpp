@@ -47,6 +47,10 @@ int main() {
     david.showState();
     cout << endl << "Goliath" << endl;
     goliath.showState();
+
+    Character michel(david); // clone David
+    cout << endl << "Michel" << endl;
+    michel.showState();
     break;
   }
   }
