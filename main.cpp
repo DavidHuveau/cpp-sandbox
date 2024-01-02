@@ -35,7 +35,7 @@ int main() {
     pointers();
     break;
   case 6: {
-    Character david, goliath;
+    Character david, goliath("Epee aiguisee", 20);
     goliath.attaquer(david);
     david.boirePotionDeVie(20);
     goliath.attaquer(david);

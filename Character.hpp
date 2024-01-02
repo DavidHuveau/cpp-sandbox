@@ -5,11 +5,15 @@
 
 class Character {
 public:
+  Character();
+  Character(std::string nomArme, int degatsArme);
+  Character(Character const& autre);
+  ~Character();
   void recevoirDegats(int nbDegats);
-  void attaquer(Character &cible);
+  void attaquer(Character& cible);
   void boirePotionDeVie(int quantitePotion);
   void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
-  bool estVivant();
+  bool estVivant() const;
 
 private:
   int         m_vie;
