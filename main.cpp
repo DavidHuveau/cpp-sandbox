@@ -7,6 +7,7 @@
 #include "files.hpp"
 #include "pointers.hpp"
 #include "Character.hpp"
+#include "Vector2D.hpp"
 
 using namespace std;
 
@@ -52,6 +53,13 @@ int main() {
     cout << endl << "Michel" << endl;
     michel.showState();
     break;
+  }
+  case 7: {
+    Vector2D vector1(2, 3);
+    Vector2D vector2(1, 4);
+
+    Vector2D result = vector1 + vector2;
+    result.display();
   }
   }
   return 0;

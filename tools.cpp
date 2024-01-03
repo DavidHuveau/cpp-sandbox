@@ -5,11 +5,12 @@
 using namespace std;
 
 void showMenu(short int& choiceNumber) {
-  cout << "1 - variables" << endl;
-  cout << "2 - arrays" << endl;
-  cout << "3 - read file" << endl;
-  cout << "4 - write file" << endl;
-  cout << "5 - pointers" << endl;
+  cout << "1 - Variables" << endl;
+  cout << "2 - Arrays" << endl;
+  cout << "3 - Read file" << endl;
+  cout << "4 - Write file" << endl;
+  cout << "5 - Pointers" << endl;
   cout << "6 - Character classes" << endl;
+  cout << "7 - Operator overload" << endl;
   cin >> choiceNumber;
 }
