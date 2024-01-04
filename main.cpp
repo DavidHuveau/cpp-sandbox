@@ -60,6 +60,8 @@ int main() {
 
     Vector2D result = vector1 + vector2;
     result.display();
+    result += vector1;
+    cout << result << endl;
   }
   }
   return 0;
