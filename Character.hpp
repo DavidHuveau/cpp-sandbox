@@ -13,6 +13,8 @@ public:
   // By default, all the object's attributes will be copied.
   Character(Character const& other);
   ~Character();
+  Character& operator=(Character const& other);
+
   void receiveDamages(int nbDamages);
   void attack(Character& target);
   void drinkLifePotion(int quantityPotion);

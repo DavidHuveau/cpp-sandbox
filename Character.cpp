@@ -21,6 +21,17 @@ Character::~Character() {
   delete m_weapon;
 }
 
+Character& Character::operator=(Character const& other) {
+  // Check that the object is not the same as the one received as an argument
+  if(this != &other) {
+    m_life = other.m_life;
+    delete m_weapon;
+    // the weapon must also be cloned, otherwise the new character will use the same weapon address
+    m_weapon = new Weapon(*(other.m_weapon));
+  }
+  return *this;
+}
+
 void Character::receiveDamages(int nbDamages) {
   m_life -= nbDamages;
 
