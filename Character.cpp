@@ -4,16 +4,20 @@
 
 using namespace std;
 
-Character::Character() : m_life(100), m_weapon("Epee rouillee", 10) {
+Character::Character() : m_life(100), m_weapon(nullptr) {
+  m_weapon = new Weapon();
 }
 
-Character::Character(std::string weaponName, int weaponDamages) : m_life(100), m_weapon(weaponName, weaponDamages) {
+Character::Character(string weaponName, int weaponDamages) : m_life(100), m_weapon(nullptr) {
+  m_weapon = new Weapon(weaponName, weaponDamages);
 }
 
 Character::Character(Character const& other) : m_life(other.m_life), m_weapon(other.m_weapon) {
+  // todo
 }
 
 Character::~Character() {
+  delete m_weapon;
 }
 
 void Character::receiveDamages(int nbDamages) {
@@ -26,7 +30,7 @@ void Character::receiveDamages(int nbDamages) {
 
 void Character::attack(Character& target) {
   cout << ">Attack" << endl;
-  target.receiveDamages(m_weapon.getDamages());
+  target.receiveDamages(m_weapon->getDamages());
 }
 
 void Character::drinkLifePotion(int quantityPotion) {
@@ -40,7 +44,7 @@ void Character::drinkLifePotion(int quantityPotion) {
 
 void Character::changeWeapon(string nameNewWeapon, int damagesNewWeapon) {
   cout << ">Change weapon: " << nameNewWeapon << endl;
-  m_weapon.change(nameNewWeapon, damagesNewWeapon);
+  m_weapon->change(nameNewWeapon, damagesNewWeapon);
 }
 
 bool Character::isAlive() const {
@@ -49,5 +53,5 @@ bool Character::isAlive() const {
 
 void Character::showState() {
   cout << "Life : " << m_life << endl;
-  m_weapon.show();
+  m_weapon->show();
 }

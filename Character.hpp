@@ -22,7 +22,7 @@ public:
 
 private:
   int    m_life;
-  Weapon m_weapon;
+  Weapon *m_weapon;
 };
 
 #endif
