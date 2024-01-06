@@ -12,8 +12,9 @@ Character::Character(string weaponName, int weaponDamages) : m_life(100), m_weap
   m_weapon = new Weapon(weaponName, weaponDamages);
 }
 
-Character::Character(Character const& other) : m_life(other.m_life), m_weapon(other.m_weapon) {
-  // todo
+Character::Character(Character const& other) : m_life(other.m_life), m_weapon(nullptr) {
+  // the weapon must also be cloned, otherwise the new character will use the same weapon address
+  m_weapon = new Weapon(*(other.m_weapon));
 }
 
 Character::~Character() {

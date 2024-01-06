@@ -49,9 +49,9 @@ int main() {
     cout << endl << "Goliath" << endl;
     goliath.showState();
 
-    // Character michel(david); // clone David
-    // cout << endl << "Michel" << endl;
-    // michel.showState();
+    Character michel(david); // clone David
+    cout << endl << "Michel" << endl;
+    michel.showState();
     break;
   }
   case 7: {

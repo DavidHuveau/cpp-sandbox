@@ -15,7 +15,7 @@ void Weapon::change(string name, int damages) {
 }
 
 void Weapon::show() const {
-  cout << "Weapon : " << m_name << " (Damages : " << m_damages << ")" << endl;
+  cout << "Weapon : " << m_name << " (Damages : " << m_damages << ")" << " (Adress : " << this << ")" << endl;
 }
 
 int Weapon::getDamages() const {
