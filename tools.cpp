@@ -12,5 +12,6 @@ void showMenu(short int& choiceNumber) {
   cout << "5 - Pointers" << endl;
   cout << "6 - Character classes" << endl;
   cout << "7 - Operator overload" << endl;
+  cout << "8 - Inheritance" << endl;
   cin >> choiceNumber;
 }

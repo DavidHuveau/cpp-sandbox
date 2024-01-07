@@ -8,6 +8,7 @@
 #include "pointers.hpp"
 #include "Character.hpp"
 #include "Vector2D.hpp"
+#include "Car.hpp"
 
 using namespace std;
 
@@ -67,6 +68,10 @@ int main() {
     result.display();
     result += vector1;
     cout << result << endl;
+  }
+  case 8: {
+    Car clio(500, 5);
+    clio.display();
   }
   }
   return 0;
