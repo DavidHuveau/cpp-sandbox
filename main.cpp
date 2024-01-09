@@ -9,6 +9,7 @@
 #include "Character.hpp"
 #include "Vector2D.hpp"
 #include "Car.hpp"
+#include "Vehicle.hpp"
 
 using namespace std;
 
@@ -70,8 +71,11 @@ int main() {
     cout << result << endl;
   }
   case 8: {
+    Vehicle v(33);
+    presenter(v);
+
     Car clio(500, 5);
-    clio.display();
+    presenter(clio);
   }
   }
   return 0;

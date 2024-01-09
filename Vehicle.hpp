@@ -5,9 +5,9 @@ class Vehicle {
 public:
   Vehicle();
   Vehicle(int price);
-  void display() const;
+  virtual void display() const;
 
-private:
+protected:
   int m_price;
 };
 

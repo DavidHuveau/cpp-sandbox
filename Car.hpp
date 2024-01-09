@@ -1,15 +1,16 @@
-#ifndef BIKEHPP_INCLUDED
-#define BIKEHPP_INCLUDED
+#ifndef CAR_HPP_INCLUDED
+#define CAR_HPP_INCLUDED
 
 #include "Vehicle.hpp"
 
 class Car : public Vehicle {
 public:
-  Car();  // Will automatically call the default Vehicle constructor
+  Car();
   Car(int price, int numDoors);
+  void display() const override;
 
-private:
+protected:
   int m_numDoors;
 };
 
-#endif  // BIKEHPP_INCLUDED
+#endif  // CAR_HPP_INCLUDED

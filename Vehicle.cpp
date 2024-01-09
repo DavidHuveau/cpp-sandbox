@@ -11,5 +11,5 @@ Vehicle::Vehicle(int price) : m_price(price) {
 }
 
 void Vehicle::display() const {
-  cout << "Price: " << m_price << endl;
+  cout << "This is a vehicle. The price is : " << m_price << endl;
 }

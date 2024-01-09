@@ -15,3 +15,7 @@ void showMenu(short int& choiceNumber) {
   cout << "8 - Inheritance" << endl;
   cin >> choiceNumber;
 }
+
+void presenter(Vehicle& v) {
+  v.display();
+}
