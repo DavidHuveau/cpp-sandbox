@@ -85,15 +85,11 @@ int main() {
     cout << "---" << endl;
 
     // GOOD WAY
-    vector<Vehicle*> good_garage;
-    good_garage.push_back(&v);
-    good_garage.push_back(&clio);
-    for (short int i = 0; i < good_garage.size(); i++) {
+    vector<Vehicle*> good_garage = {&v, &clio};
+    for (short int i(0); i < good_garage.size(); i++) {
       // presenter(*(good_garage[i]));
       good_garage[i]->display();
     }
-
-    
   }
   }
   return 0;

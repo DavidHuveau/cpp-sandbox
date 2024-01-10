@@ -5,6 +5,7 @@ class Vehicle {
 public:
   Vehicle();
   Vehicle(int price);
+  virtual ~Vehicle();
   virtual void display() const;
 
 protected:

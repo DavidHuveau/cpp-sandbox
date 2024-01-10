@@ -10,6 +10,10 @@ Car::Car() : Vehicle(), m_numDoors(0) {
 Car::Car(int price, int numDoors) : Vehicle(price), m_numDoors(numDoors) {
 }
 
+Car::~Car() {  
+  cout << "Car desctructor" << " (Adress : " << this << ")" << endl;
+}
+
 void Car::display() const {
   Vehicle::display();
   cout << "This is a car. The price is : " << m_numDoors << " (Adress : " << this << ")" << endl;

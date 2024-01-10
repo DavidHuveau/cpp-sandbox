@@ -7,6 +7,7 @@ class Car : public Vehicle {
 public:
   Car();
   Car(int price, int numDoors);
+  virtual ~Car() override;
   void display() const override;
 
 protected:
