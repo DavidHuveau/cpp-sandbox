@@ -4,6 +4,6 @@
 #include "Vehicle.hpp"
 
 void showMenu(short int& choiceNumber);
-void presenter(Vehicle& v);
+void presenter(Vehicle const& v);
 
 #endif  // TOOLS_HPP_INCLUDED

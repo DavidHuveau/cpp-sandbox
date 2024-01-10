@@ -16,6 +16,6 @@ void showMenu(short int& choiceNumber) {
   cin >> choiceNumber;
 }
 
-void presenter(Vehicle& v) {
+void presenter(Vehicle const& v) {
   v.display();
 }

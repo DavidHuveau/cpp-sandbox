@@ -72,10 +72,28 @@ int main() {
   }
   case 8: {
     Vehicle v(33);
+    Car     clio(500, 5);
     presenter(v);
-
-    Car clio(500, 5);
     presenter(clio);
+    cout << "---" << endl;
+
+    // WRONG WAY, BECAUSE THEY ARE COPIES AND NOT THE ORIGINALS
+    vector<Vehicle> bad_garage = {v, clio};
+    for (short int i = 0; i < bad_garage.size(); i++) {
+      presenter(bad_garage[i]);
+    }
+    cout << "---" << endl;
+
+    // GOOD WAY
+    vector<Vehicle*> good_garage;
+    good_garage.push_back(&v);
+    good_garage.push_back(&clio);
+    for (short int i = 0; i < good_garage.size(); i++) {
+      // presenter(*(good_garage[i]));
+      good_garage[i]->display();
+    }
+
+    
   }
   }
   return 0;
